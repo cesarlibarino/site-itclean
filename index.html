@@ -1,248 +1,599 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>It Clean Vitória da Conquista | Seus Móveis Novos Outra Vez</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        
-        .app-container {
-            max-width: 450px; /* Simula largura de celular no Desktop */
-            margin: 0 auto;
-            background-color: #ffffff;
-            min-height: 100vh;
-            box-shadow: 0 0 40px rgba(0,0,0,0.1);
-            position: relative;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        .btn-pulse {
-            animation: pulse-green 2s infinite;
-        }
+  <title>It Clean | Higienização Premium em Vitória da Conquista</title>
 
-        @keyframes pulse-green {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(132, 204, 22, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(132, 204, 22, 0); }
-        }
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border-top: 1px solid #f1f5f9;
-        }
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-        /* Esconder scrollbar para estética de App */
-        ::-webkit-scrollbar { width: 0px; }
-    </style>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .btn-pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.6);
+      }
+
+      70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 18px rgba(132, 204, 22, 0);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(132, 204, 22, 0);
+      }
+    }
+
+    .hero-bg {
+      background:
+        linear-gradient(
+          rgba(3, 7, 18, 0.72),
+          rgba(3, 7, 18, 0.78)
+        ),
+        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .before-after img {
+      transition: 0.4s ease;
+    }
+
+    .before-after:hover img {
+      transform: scale(1.05);
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+    }
+
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.8);
+    }
+  </style>
 </head>
-<body class="bg-slate-100 antialiased">
 
-    <div class="app-container pb-24">
-        
-        <!-- HEADER / TOPO -->
-        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md px-6 py-4 flex justify-between items-center border-b border-slate-50">
-            <div class="flex flex-col">
-                <span class="text-blue-900 font-extrabold text-xl tracking-tight">IT CLEAN</span>
-                <span class="text-[10px] text-blue-500 font-bold uppercase tracking-widest leading-none">V. da Conquista</span>
-            </div>
-            <div class="bg-blue-50 text-blue-700 text-[10px] font-bold px-3 py-1.5 rounded-full border border-blue-100">
-                ⭐ 12 Anos de Experiência
-            </div>
-        </header>
+<body class="text-slate-800">
 
-        <!-- DOBRA 1: HERO (Gancho) -->
-        <section id="inicio" class="relative pt-6 px-6 overflow-hidden">
-            <div class="rounded-3xl overflow-hidden mb-6 shadow-2xl shadow-blue-100">
-                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800" alt="Sala Limpa" class="w-full h-56 object-cover">
-            </div>
-            
-            <h1 class="text-3xl font-extrabold text-blue-950 leading-tight">
-                Seus móveis <span class="text-blue-600 underline decoration-lime-400">novos outra vez</span> sem gastar com uma reforma cara.
-            </h1>
-            
-            <p class="mt-4 text-slate-600 leading-relaxed text-sm">
-                Devolvemos a saúde e o conforto para o seu lar em Vitória da Conquista. Elimine ácaros, fungos e manchas do seu estofado com nossa limpeza profunda e secagem rápida.
-            </p>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 glass border-b border-slate-200">
 
-            <a href="https://api.whatsapp.com/send?phone=5577992101215&text=Oi%20vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento&fbclid=PAZXh0bgNhZW0DMTAwAHNydGMGYXBwX2lkDzkzNjYxOTc0MzM5MjQ1OQABp4M7uZoMkNnhjFtaAaXPBKjsKBlKT-0bV9U6Wp_Pwkj5_OlSpjwnfsVAwcba_aem_b8B2wsKUyKNpLbMCYjRhkw" 
-               class="btn-pulse mt-8 flex items-center justify-center gap-3 bg-lime-500 hover:bg-lime-600 text-blue-950 font-extrabold py-5 px-6 rounded-2xl shadow-lg shadow-lime-200 transition-all">
-                <i data-lucide="sparkles" class="w-5 h-5"></i>
-                SOLICITAR ORÇAMENTO GRÁTIS
-            </a>
-        </section>
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
-        <!-- DOBRA 2: SERVIÇOS (Benefícios) -->
-        <section id="servicos" class="mt-12 px-6 scroll-mt-24">
-            <h2 class="text-xl font-extrabold text-blue-950 mb-6 flex items-center gap-2">
-                <span class="w-8 h-1 bg-lime-500 rounded-full"></span>
-                Nossas Soluções para o seu Lar
-            </h2>
+      <div class="flex items-center justify-between h-20">
 
-            <div class="space-y-4">
-                <!-- Card 1 -->
-                <div class="p-5 bg-slate-50 rounded-3xl border border-slate-100 flex gap-4">
-                    <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
-                        <i data-lucide="armchair" class="text-white w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-blue-950">Higienização Profunda</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sofás, colchões e poltronas livres de sujeiras extremas, bactérias e mau odor. Proteja sua família das alergias respiratórias.</p>
-                    </div>
-                </div>
+        <div>
+          <h2 class="text-2xl font-extrabold text-blue-950">
+            IT CLEAN
+          </h2>
 
-                <!-- Card 2 -->
-                <div class="p-5 bg-slate-50 rounded-3xl border border-slate-100 flex gap-4">
-                    <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
-                        <i data-lucide="shield-check" class="text-white w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-blue-950">Blindagem e Impermeabilização</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Proteção máxima contra líquidos e acidentes do dia a dia. Aumente a vida útil do seu móvel em vários anos.</p>
-                    </div>
-                </div>
+          <p class="text-xs uppercase tracking-[4px] text-blue-500 font-bold">
+            Vitória da Conquista
+          </p>
+        </div>
 
-                <!-- Card 3 -->
-                <div class="p-5 bg-slate-50 rounded-3xl border border-slate-100 flex gap-4">
-                    <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
-                        <i data-lucide="wind" class="text-white w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-blue-950">Limpeza de Ar-Condicionado</h4>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Respire ar puro de verdade. Limpeza especializada que melhora o desempenho do seu aparelho e economiza energia elétrica.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <nav class="hidden lg:flex items-center gap-8">
 
-        <!-- DOBRA 3: COMO FUNCIONA E PROVA SOCIAL -->
-        <section id="avaliacoes" class="mt-16 px-6 scroll-mt-24">
-            <div class="bg-blue-950 rounded-[40px] p-8 text-white relative overflow-hidden">
-                <div class="absolute top-0 right-0 opacity-10">
-                    <i data-lucide="info" class="w-32 h-32 -mr-10 -mt-10"></i>
-                </div>
-                
-                <h2 class="text-2xl font-bold mb-8">Serviço VIP sem sair de casa</h2>
-                
-                <div class="space-y-6">
-                    <div class="flex gap-4 items-center">
-                        <span class="w-8 h-8 rounded-full bg-lime-500 text-blue-950 flex items-center justify-center font-black text-sm shrink-0">1</span>
-                        <p class="text-sm font-medium">Agendamento rápido pelo WhatsApp.</p>
-                    </div>
-                    <div class="flex gap-4 items-center">
-                        <span class="w-8 h-8 rounded-full bg-lime-500 text-blue-950 flex items-center justify-center font-black text-sm shrink-0">2</span>
-                        <p class="text-sm font-medium">Atendimento em domicílio, sem bagunça.</p>
-                    </div>
-                    <div class="flex gap-4 items-center">
-                        <span class="w-8 h-8 rounded-full bg-lime-500 text-blue-950 flex items-center justify-center font-black text-sm shrink-0">3</span>
-                        <p class="text-sm font-medium">Máquinas de alta extração e produtos aprovados.</p>
-                    </div>
-                </div>
-            </div>
+          <a href="#servicos" class="font-semibold hover:text-blue-600 transition">
+            Serviços
+          </a>
 
-            <div class="mt-12">
-                <p class="text-center font-bold text-blue-950 mb-6">O que dizem nossos clientes</p>
-                <div class="flex overflow-x-auto gap-4 pb-4 snap-x">
-                    <!-- Depoimento 1 -->
-                    <div class="min-w-[280px] snap-center bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-                        <div class="flex text-yellow-400 mb-3 gap-1">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-sm text-slate-600 italic">"Meu sofá estava cheio de manchas de café e voltou a ficar zero! Atendimento impecável da equipe."</p>
-                        <p class="mt-4 font-bold text-blue-950 text-xs">Mariana S.</p>
-                    </div>
-                    <!-- Depoimento 2 -->
-                    <div class="min-w-[280px] snap-center bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-                        <div class="flex text-yellow-400 mb-3 gap-1">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-sm text-slate-600 italic">"Tiraram todo o cheiro de mofo do meu colchão, recomendo de olhos fechados. Muito rápidos!"</p>
-                        <p class="mt-4 font-bold text-blue-950 text-xs">Carlos A.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <a href="#resultados" class="font-semibold hover:text-blue-600 transition">
+            Resultados
+          </a>
 
-        <!-- DOBRA 4: GARANTIA E FECHAMENTO -->
-        <section id="contato" class="mt-16 px-6 text-center scroll-mt-24">
-            <div class="mb-8">
-                <div class="inline-block p-4 bg-blue-50 rounded-full mb-4">
-                    <i data-lucide="award" class="w-12 h-12 text-blue-600"></i>
-                </div>
-                <h2 class="text-2xl font-extrabold text-blue-950">Satisfação 100% Garantida</h2>
-                <p class="mt-4 text-slate-600 text-sm leading-relaxed">
-                    São mais de uma década cuidando dos lares de Vitória da Conquista. Confiamos tanto no nosso método que, se você não ficar satisfeito com o resultado, nós refazemos o serviço.
-                </p>
-            </div>
+          <a href="#avaliacoes" class="font-semibold hover:text-blue-600 transition">
+            Avaliações
+          </a>
 
-            <a href="https://api.whatsapp.com/send?phone=5577992101215&text=Oi%20vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento&fbclid=PAZXh0bgNhZW0DMTAwAHNydGMGYXBwX2lkDzkzNjYxOTc0MzM5MjQ1OQABp4M7uZoMkNnhjFtaAaXPBKjsKBlKT-0bV9U6Wp_Pwkj5_OlSpjwnfsVAwcba_aem_b8B2wsKUyKNpLbMCYjRhkw" 
-               class="flex items-center justify-center gap-3 bg-lime-500 hover:bg-lime-600 text-blue-950 font-black py-6 px-8 rounded-3xl shadow-xl shadow-lime-200 transition-all w-full text-lg">
-                <i data-lucide="phone-call" class="w-6 h-6"></i>
-                Falar com um Especialista Agora
-            </a>
-            
-            <div class="mt-12 mb-8 flex justify-center items-center gap-6 opacity-30 grayscale">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Visa_2014_logo_detail.svg" alt="Visa" class="h-4">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-8">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo%E2%80%94Pix.svg" alt="Pix" class="h-5">
-            </div>
-        </section>
+          <a
+            href="https://wa.me/5577992101215?text=Oi%20gostaria%20de%20um%20orçamento"
+            class="bg-lime-400 hover:bg-lime-300 transition px-6 py-3 rounded-2xl font-black text-blue-950"
+          >
+            Solicitar orçamento
+          </a>
 
-        <!-- FOOTER / CRÉDITOS -->
-        <footer class="text-center pb-12">
-            <p class="text-[10px] text-slate-400 font-medium">© 2024 It Clean Vitória da Conquista. <br> Todos os direitos reservados.</p>
-        </footer>
-
-        <!-- BOTTOM NAV (App-Like) -->
-        <nav class="glass-nav fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[450px] h-20 flex justify-around items-center px-6 z-[100]">
-            <button onclick="scrollToSection('inicio')" class="flex flex-col items-center gap-1 group">
-                <i data-lucide="home" class="w-5 h-5 text-slate-400 group-hover:text-blue-600"></i>
-                <span class="text-[10px] font-bold text-slate-500 group-hover:text-blue-900 tracking-tighter">Início</span>
-            </button>
-            <button onclick="scrollToSection('servicos')" class="flex flex-col items-center gap-1 group">
-                <i data-lucide="sparkles" class="w-5 h-5 text-slate-400 group-hover:text-blue-600"></i>
-                <span class="text-[10px] font-bold text-slate-500 group-hover:text-blue-900 tracking-tighter">Serviços</span>
-            </button>
-            <button onclick="scrollToSection('avaliacoes')" class="flex flex-col items-center gap-1 group">
-                <i data-lucide="star" class="w-5 h-5 text-slate-400 group-hover:text-blue-600"></i>
-                <span class="text-[10px] font-bold text-slate-500 group-hover:text-blue-900 tracking-tighter">Avaliações</span>
-            </button>
-            <button onclick="scrollToSection('contato')" class="flex flex-col items-center gap-1 group">
-                <div class="bg-blue-600 p-2 rounded-xl -mt-4 shadow-lg shadow-blue-200">
-                    <i data-lucide="send" class="w-5 h-5 text-white"></i>
-                </div>
-                <span class="text-[10px] font-bold text-blue-900 tracking-tighter">Orçamento</span>
-            </button>
         </nav>
+
+      </div>
 
     </div>
 
-    <script>
-        // Inicializa ícones Lucide
-        lucide.createIcons();
+  </header>
 
-        // Scroll suave
-        function scrollToSection(id) {
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    </script>
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-32 w-full">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+
+          <div class="inline-flex items-center gap-2 bg-lime-400 text-blue-950 px-5 py-2 rounded-full font-black text-xs uppercase tracking-wider">
+
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+
+            Higienização Premium
+
+          </div>
+
+          <h1 class="mt-8 text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+
+            Seu sofá pode estar
+            <span class="text-lime-400">
+              mais sujo do que parece.
+            </span>
+
+          </h1>
+
+          <p class="mt-8 text-lg text-slate-200 leading-relaxed max-w-xl">
+
+            Eliminamos ácaros, fungos, bactérias, manchas e mau cheiro com limpeza profunda e secagem rápida.
+
+            Deixe seus móveis com aparência de novos novamente.
+
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+
+            <a
+              href="https://wa.me/5577992101215?text=Oi%20gostaria%20de%20um%20orçamento"
+              class="btn-pulse bg-lime-400 hover:bg-lime-300 text-blue-950 font-black py-5 px-8 rounded-2xl text-center transition"
+            >
+
+              Solicitar orçamento grátis
+
+            </a>
+
+            <a
+              href="#resultados"
+              class="border border-white/20 hover:bg-white/10 text-white font-bold py-5 px-8 rounded-2xl text-center transition"
+            >
+
+              Ver resultados
+
+            </a>
+
+          </div>
+
+          <div class="mt-12 flex flex-wrap gap-8">
+
+            <div>
+              <h3 class="text-3xl font-extrabold text-white">
+                +3.000
+              </h3>
+
+              <p class="text-slate-300 text-sm">
+                clientes atendidos
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-3xl font-extrabold text-white">
+                12 anos
+              </h3>
+
+              <p class="text-slate-300 text-sm">
+                de experiência
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-3xl font-extrabold text-white">
+                100%
+              </h3>
+
+              <p class="text-slate-300 text-sm">
+                satisfação garantida
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="py-24 bg-white" id="servicos">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="text-center max-w-3xl mx-auto">
+
+        <span class="text-blue-600 font-black uppercase tracking-[4px] text-sm">
+          nossos serviços
+        </span>
+
+        <h2 class="mt-4 text-4xl lg:text-5xl font-extrabold text-blue-950">
+          Limpeza profunda que transforma seu ambiente
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+        <!-- CARD -->
+        <div class="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:-translate-y-2 transition shadow-sm hover:shadow-2xl">
+
+          <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center">
+
+            <i data-lucide="armchair" class="text-white w-8 h-8"></i>
+
+          </div>
+
+          <h3 class="mt-6 text-2xl font-bold text-blue-950">
+            Higienização de Sofás
+          </h3>
+
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Removemos manchas, bactérias, fungos e odores com limpeza profissional de alta extração.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:-translate-y-2 transition shadow-sm hover:shadow-2xl">
+
+          <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center">
+
+            <i data-lucide="shield-check" class="text-white w-8 h-8"></i>
+
+          </div>
+
+          <h3 class="mt-6 text-2xl font-bold text-blue-950">
+            Impermeabilização
+          </h3>
+
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Proteção contra líquidos, sujeira e acidentes do dia a dia.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:-translate-y-2 transition shadow-sm hover:shadow-2xl">
+
+          <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center">
+
+            <i data-lucide="wind" class="text-white w-8 h-8"></i>
+
+          </div>
+
+          <h3 class="mt-6 text-2xl font-bold text-blue-950">
+            Ar-condicionado
+          </h3>
+
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Respire ar mais puro com limpeza especializada e higienização completa.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ANTES E DEPOIS -->
+  <section class="py-24 bg-slate-100" id="resultados">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="text-center">
+
+        <span class="text-blue-600 font-black uppercase tracking-[4px] text-sm">
+          antes e depois
+        </span>
+
+        <h2 class="mt-4 text-4xl lg:text-5xl font-extrabold text-blue-950">
+          Veja a diferença
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 mt-16">
+
+        <div class="before-after bg-white rounded-[40px] overflow-hidden shadow-xl">
+
+          <img
+            src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-96 object-cover"
+          />
+
+          <div class="p-8">
+
+            <span class="bg-red-100 text-red-500 px-4 py-2 rounded-full font-black uppercase text-xs">
+              Antes
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="before-after bg-white rounded-[40px] overflow-hidden shadow-xl">
+
+          <img
+            src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-96 object-cover"
+          />
+
+          <div class="p-8">
+
+            <span class="bg-lime-100 text-lime-600 px-4 py-2 rounded-full font-black uppercase text-xs">
+              Depois
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="py-24 bg-blue-950 text-white">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="text-center">
+
+        <span class="text-lime-400 font-black uppercase tracking-[4px] text-sm">
+          como funciona
+        </span>
+
+        <h2 class="mt-4 text-4xl lg:text-5xl font-extrabold">
+          Atendimento rápido e sem bagunça
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 mt-20">
+
+        <div>
+
+          <div class="w-16 h-16 rounded-full bg-lime-400 text-blue-950 flex items-center justify-center font-black text-2xl">
+            1
+          </div>
+
+          <h3 class="mt-6 text-2xl font-bold">
+            Chame no WhatsApp
+          </h3>
+
+          <p class="mt-4 text-slate-300">
+            Você envia fotos e recebe atendimento rápido.
+          </p>
+
+        </div>
+
+        <div>
+
+          <div class="w-16 h-16 rounded-full bg-lime-400 text-blue-950 flex items-center justify-center font-black text-2xl">
+            2
+          </div>
+
+          <h3 class="mt-6 text-2xl font-bold">
+            Atendimento em casa
+          </h3>
+
+          <p class="mt-4 text-slate-300">
+            Fazemos tudo no local sem sujeira e sem complicação.
+          </p>
+
+        </div>
+
+        <div>
+
+          <div class="w-16 h-16 rounded-full bg-lime-400 text-blue-950 flex items-center justify-center font-black text-2xl">
+            3
+          </div>
+
+          <h3 class="mt-6 text-2xl font-bold">
+            Resultado imediato
+          </h3>
+
+          <p class="mt-4 text-slate-300">
+            Seu estofado renovado, higienizado e cheiroso.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="py-24 bg-white" id="avaliacoes">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="text-center">
+
+        <span class="text-blue-600 font-black uppercase tracking-[4px] text-sm">
+          avaliações
+        </span>
+
+        <h2 class="mt-4 text-4xl lg:text-5xl font-extrabold text-blue-950">
+          O que nossos clientes dizem
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-20">
+
+        <div class="bg-slate-50 p-8 rounded-[32px] border border-slate-100">
+
+          <div class="flex gap-1 text-yellow-400">
+
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+
+          </div>
+
+          <p class="mt-6 text-slate-600 italic leading-relaxed">
+            “Meu sofá voltou a parecer novo. Atendimento extremamente profissional.”
+          </p>
+
+          <h4 class="mt-6 font-bold text-blue-950">
+            Mariana S.
+          </h4>
+
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-[32px] border border-slate-100">
+
+          <div class="flex gap-1 text-yellow-400">
+
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+
+          </div>
+
+          <p class="mt-6 text-slate-600 italic leading-relaxed">
+            “Tiraram manchas antigas que eu achei que não sairiam nunca.”
+          </p>
+
+          <h4 class="mt-6 font-bold text-blue-950">
+            Carlos A.
+          </h4>
+
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-[32px] border border-slate-100">
+
+          <div class="flex gap-1 text-yellow-400">
+
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+            <i data-lucide="star" class="fill-current"></i>
+
+          </div>
+
+          <p class="mt-6 text-slate-600 italic leading-relaxed">
+            “Atendimento rápido e sofá sem cheiro nenhum depois da limpeza.”
+          </p>
+
+          <h4 class="mt-6 font-bold text-blue-950">
+            Juliana M.
+          </h4>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-24 bg-gradient-to-r from-blue-950 to-blue-900 text-white">
+
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center">
+
+      <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight">
+
+        Seu sofá merece uma limpeza profissional.
+
+      </h2>
+
+      <p class="mt-8 text-xl text-slate-300 leading-relaxed">
+
+        Fale agora com nossa equipe e receba um orçamento gratuito no WhatsApp.
+
+      </p>
+
+      <a
+        href="https://wa.me/5577992101215?text=Oi%20gostaria%20de%20um%20orçamento"
+        class="btn-pulse inline-flex items-center gap-3 mt-10 bg-lime-400 hover:bg-lime-300 text-blue-950 font-black py-6 px-10 rounded-2xl text-xl transition"
+      >
+
+        <i data-lucide="phone-call"></i>
+
+        Solicitar orçamento
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
+
+      <p class="text-sm">
+        © 2026 IT CLEAN Vitória da Conquista — Todos os direitos reservados.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- BOTÃO WHATS -->
+  <a
+    href="https://wa.me/5577992101215?text=Oi%20gostaria%20de%20um%20orçamento"
+    class="floating-whatsapp bg-lime-400 hover:bg-lime-300 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition"
+  >
+
+    <i data-lucide="message-circle" class="text-blue-950 w-8 h-8"></i>
+
+  </a>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
 </body>
 </html>
