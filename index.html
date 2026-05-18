@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It Clean Vitória da Conquista | Seus móveis novos outra vez</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        
+        .app-container {
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: #fff;
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        }
+
+        .btn-pulse {
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(132, 204, 22, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(132, 204, 22, 0); }
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .gradient-blue {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+
+        /* Estilo para esconder scrollbar */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+</head>
+<body class="bg-slate-100">
+
+    <div class="app-container relative pb-24">
+        
+        <!-- Header com a Logo Atualizada -->
+        <header class="p-4 flex justify-between items-center bg-white sticky top-0 z-50 border-b border-gray-50">
+            <div class="flex items-center">
+                <!-- LOGO INSERIDA AQUI -->
+                <img src="logo.png" alt="Logo It Clean" class="h-12 w-auto">
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5577992101215&text=Oi%20vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento" class="text-blue-600 text-sm font-semibold flex items-center gap-1">
+                Suporte <i class="fa-regular fa-comment-dots text-lg"></i>
+            </a>
+        </header>
+
+        <!-- Hero Section (Headline Matadora) -->
+        <section id="inicio" class="p-6 gradient-blue text-white rounded-b-[40px]">
+            <span class="bg-blue-400/30 text-blue-100 text-[11px] font-bold py-1 px-3 rounded-full uppercase tracking-wider">Líder em Higienização na Região</span>
+            <h2 class="text-3xl font-extrabold mt-4 leading-tight">
+                Seus móveis <span class="text-lime-300">novos outra vez</span> sem gastar com reforma.
+            </h2>
+            <p class="mt-4 text-blue-100 text-sm leading-relaxed">
+                Eliminamos 99,9% de ácaros, fungos e odores que causam alergias. Higienização profunda com tecnologia de extração alemã na sua casa.
+            </p>
+            
+            <div class="mt-8 flex flex-col gap-3">
+                <a href="https://api.whatsapp.com/send?phone=5577992101215&text=Oi%20vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento" class="btn-pulse bg-lime-500 hover:bg-lime-600 text-blue-950 font-bold py-4 px-6 rounded-2xl flex items-center justify-center gap-3 shadow-lg transition-all text-center">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    SOLICITAR ORÇAMENTO GRÁTIS
+                </a>
+                <p class="text-[10px] text-center text-blue-200 opacity-80 uppercase tracking-tighter">⏱️ Resposta rápida em menos de 5 minutos</p>
+            </div>
+        </section>
+
+        <!-- Social Proof Stats -->
+        <section class="px-6 -mt-6">
+            <div class="bg-white rounded-2xl shadow-xl p-5 grid grid-cols-3 gap-2 border border-blue-50">
+                <div class="text-center">
+                    <p class="text-blue-600 font-bold text-xl">12</p>
+                    <p class="text-gray-500 text-[9px] font-bold uppercase">Anos de Exp.</p>
+                </div>
+                <div class="text-center border-x border-gray-100">
+                    <p class="text-blue-600 font-bold text-xl">+15k</p>
+                    <p class="text-gray-500 text-[9px] font-bold uppercase">Atendidos</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-blue-600 font-bold text-xl">100%</p>
+                    <p class="text-gray-500 text-[9px] font-bold uppercase">Garantido</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços (Benefícios Claros) -->
+        <section id="servicos" class="p-6 mt-4">
+            <div class="flex justify-between items-end mb-6">
+                <div>
+                    <h3 class="text-gray-400 text-xs font-bold uppercase tracking-widest">O que fazemos</h3>
+                    <p class="text-2xl font-bold text-blue-900">Nossos Serviços</p>
+                </div>
+                <i class="fas fa-sliders text-blue-200 text-2xl"></i>
+            </div>
+
+            <div class="grid gap-4">
+                <div class="bg-blue-50 p-4 rounded-3xl flex gap-4 items-start border border-blue-100 hover:border-blue-300 transition-all">
+                    <div class="bg-white p-3 rounded-2xl shadow-sm text-blue-600">
+                        <i class="fas fa-couch text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-900">Higienização de Estofados</h4>
+                        <p class="text-xs text-gray-600 mt-1">Removemos manchas e patógenos de sofás, poltronas e cadeiras.</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-3xl flex gap-4 items-start border border-blue-100 hover:border-blue-300 transition-all">
+                    <div class="bg-white p-3 rounded-2xl shadow-sm text-blue-600">
+                        <i class="fas fa-shield-halved text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-900">Impermeabilização Blindada</h4>
+                        <p class="text-xs text-gray-600 mt-1">Proteção contra líquidos e sujeiras, preservando o tecido por anos.</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-3xl flex gap-4 items-start border border-blue-100 hover:border-blue-300 transition-all">
+                    <div class="bg-white p-3 rounded-2xl shadow-sm text-blue-600">
+                        <i class="fas fa-wind text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-900">Ar Condicionado</h4>
+                        <p class="text-xs text-gray-600 mt-1">Limpeza técnica para um ar puro e maior vida útil do seu aparelho.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como Funciona (Processo) -->
+        <section class="p-6 bg-slate-50">
+            <h3 class="text-center font-bold text-blue-900 text-xl mb-8">Como funciona?</h3>
+            <div class="space-y-8 relative before:content-[''] before:absolute before:left-8 before:top-2 before:bottom-2 before:w-0.5 before:bg-blue-200">
+                <div class="relative pl-14">
+                    <div class="absolute left-5 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-sm z-10"></div>
+                    <h4 class="font-bold text-blue-900 text-sm">1. Agendamento Rápido</h4>
+                    <p class="text-xs text-gray-500">Escolha o melhor dia e horário via WhatsApp.</p>
+                </div>
+                <div class="relative pl-14">
+                    <div class="absolute left-5 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-sm z-10"></div>
+                    <h4 class="font-bold text-blue-900 text-sm">2. Execução Profissional</h4>
+                    <p class="text-xs text-gray-500">Equipe técnica treinada com maquinário de alta sucção.</p>
+                </div>
+                <div class="relative pl-14">
+                    <div class="absolute left-5 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-sm z-10"></div>
+                    <h4 class="font-bold text-blue-900 text-sm">3. Resultado Imediato</h4>
+                    <p class="text-xs text-gray-500">Seu estofado limpo, cheiroso e seco em poucas horas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="avaliacoes" class="p-6">
+            <p class="text-center text-xs font-bold text-blue-600 uppercase mb-2">Quem contratou recomenda</p>
+            <h3 class="text-center font-extrabold text-blue-900 text-2xl mb-6">Avaliações 5 Estrelas</h3>
+            
+            <div class="flex overflow-x-auto gap-4 pb-4 snap-x">
+                <div class="min-w-[280px] snap-center bg-white border border-gray-100 p-5 rounded-3xl shadow-sm">
+                    <div class="flex text-yellow-400 text-xs mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm italic text-gray-600 leading-relaxed">"O sofá parecia que não tinha jeito. A It Clean deixou ele novinho e com cheiro maravilhoso. Recomendo muito!"</p>
+                    <p class="mt-4 font-bold text-blue-900 text-xs">— Maria Silva, Candeias</p>
+                </div>
+                <div class="min-w-[280px] snap-center bg-white border border-gray-100 p-5 rounded-3xl shadow-sm">
+                    <div class="flex text-yellow-400 text-xs mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm italic text-gray-600 leading-relaxed">"Atendimento pontual e equipe educada. A impermeabilização salvou meu sofá dos sucos das crianças!"</p>
+                    <p class="mt-4 font-bold text-blue-900 text-xs">— Ricardo Gomes, Recreio</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section id="contato" class="p-8 text-center bg-blue-50 rounded-t-[40px]">
+            <h3 class="text-2xl font-extrabold text-blue-900 leading-tight">Gostaria de um orçamento sem compromisso?</h3>
+            <p class="text-gray-500 text-sm mt-3 mb-8">Clique no botão abaixo para ser atendido agora por um especialista.</p>
+            
+            <a href="https://api.whatsapp.com/send?phone=5577992101215&text=Oi%20vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento" class="btn-pulse inline-flex items-center gap-3 bg-lime-500 text-blue-950 font-black py-5 px-8 rounded-full shadow-2xl transition-transform active:scale-95">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                SOLICITAR AGORA
+            </a>
+            
+            <p class="mt-6 text-[10px] text-gray-400 uppercase tracking-widest">Protegido por garantia de satisfação total</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="p-6 text-center text-[10px] text-gray-400 border-t border-gray-100 mb-20">
+            <p>© 2024 It Clean Vitória da Conquista.</p>
+        </footer>
+
+        <!-- Bottom Navigation (App-Like) -->
+        <nav class="glass-nav fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[450px] h-20 px-6 flex justify-between items-center z-[100]">
+            <button onclick="scrollToSection('inicio')" class="flex flex-col items-center gap-1">
+                <i class="fas fa-home text-blue-600"></i>
+                <span class="text-[10px] font-bold text-blue-900">Início</span>
+            </button>
+            <button onclick="scrollToSection('servicos')" class="flex flex-col items-center gap-1">
+                <i class="fas fa-broom text-gray-400"></i>
+                <span class="text-[10px] font-bold text-gray-500">Serviços</span>
+            </button>
+            
+            <!-- Floating Center Button -->
+            <a href="https://api.whatsapp.com/send?phone=5577992101215&text=Oi%20vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento" class="flex flex-col items-center gap-1 bg-blue-600 p-4 rounded-2xl -mt-12 shadow-xl border-4 border-white transition-transform active:scale-90">
+                <i class="fab fa-whatsapp text-white text-2xl"></i>
+            </a>
+
+            <button onclick="scrollToSection('avaliacoes')" class="flex flex-col items-center gap-1">
+                <i class="fas fa-star text-gray-400"></i>
+                <span class="text-[10px] font-bold text-gray-500">Reviews</span>
+            </button>
+            <button onclick="scrollToSection('contato')" class="flex flex-col items-center gap-1">
+                <i class="fas fa-calculator text-gray-400"></i>
+                <span class="text-[10px] font-bold text-gray-500">Preço</span>
+            </button>
+        </nav>
+
+    </div>
+
+    <!-- Script de Navegação -->
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                const headerOffset = 90;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }
+    </script>
+</body>
+</html>
