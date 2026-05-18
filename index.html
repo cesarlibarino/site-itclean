@@ -2,9 +2,9 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>It Clean | Higienização Premium em Vitória da Conquista</title>
+  <title>It Clean | Higienização Premium</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,80 +12,85 @@
   <!-- Lucide -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Fonts -->
+  <!-- Font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: #ffffff;
-      overflow-x: hidden;
+    html{
+      overflow-x:hidden;
     }
 
-    .btn-pulse {
-      animation: pulse 2s infinite;
+    body{
+      font-family:'Plus Jakarta Sans', sans-serif;
+      background:#fff;
+      overflow-x:hidden;
+      color:#0f172a;
     }
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.6);
-      }
-
-      70% {
-        transform: scale(1.03);
-        box-shadow: 0 0 0 18px rgba(132, 204, 22, 0);
-      }
-
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(132, 204, 22, 0);
-      }
-    }
-
-    .hero-bg {
+    .hero-bg{
       background:
-        linear-gradient(
-          rgba(3, 7, 18, 0.72),
-          rgba(3, 7, 18, 0.78)
-        ),
-        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
+      linear-gradient(rgba(2,6,23,.75), rgba(2,6,23,.82)),
+      url('./img/hero.jpg');
+
+      background-size:cover;
+      background-position:center;
     }
 
-    .before-after img {
-      transition: 0.4s ease;
+    .btn-pulse{
+      animation:pulse 2s infinite;
     }
 
-    .before-after:hover img {
-      transform: scale(1.05);
+    @keyframes pulse{
+      0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(132,204,22,.6);
+      }
+
+      70%{
+        transform:scale(1.03);
+        box-shadow:0 0 0 18px rgba(132,204,22,0);
+      }
+
+      100%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(132,204,22,0);
+      }
     }
 
-    .floating-whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 999;
+    .glass{
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.85);
     }
 
-    .glass {
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.8);
+    .before-after img{
+      transition:.4s;
     }
+
+    .before-after:hover img{
+      transform:scale(1.05);
+    }
+
+    .floating-whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:999;
+    }
+
   </style>
 </head>
 
-<body class="text-slate-800">
+<body>
 
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full z-50 glass border-b border-slate-200">
@@ -94,16 +99,18 @@
 
       <div class="flex items-center justify-between h-20">
 
-        <div>
-          <h2 class="text-2xl font-extrabold text-blue-950">
-            IT CLEAN
-          </h2>
+        <!-- LOGO -->
+        <div class="flex items-center gap-4">
 
-          <p class="text-xs uppercase tracking-[4px] text-blue-500 font-bold">
-            Vitória da Conquista
-          </p>
+          <img
+            src="./img/logo.png"
+            alt="Logo It Clean"
+            class="h-12 w-auto"
+          />
+
         </div>
 
+        <!-- MENU -->
         <nav class="hidden lg:flex items-center gap-8">
 
           <a href="#servicos" class="font-semibold hover:text-blue-600 transition">
@@ -163,8 +170,6 @@
 
             Eliminamos ácaros, fungos, bactérias, manchas e mau cheiro com limpeza profunda e secagem rápida.
 
-            Deixe seus móveis com aparência de novos novamente.
-
           </p>
 
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
@@ -189,40 +194,6 @@
 
           </div>
 
-          <div class="mt-12 flex flex-wrap gap-8">
-
-            <div>
-              <h3 class="text-3xl font-extrabold text-white">
-                +3.000
-              </h3>
-
-              <p class="text-slate-300 text-sm">
-                clientes atendidos
-              </p>
-            </div>
-
-            <div>
-              <h3 class="text-3xl font-extrabold text-white">
-                12 anos
-              </h3>
-
-              <p class="text-slate-300 text-sm">
-                de experiência
-              </p>
-            </div>
-
-            <div>
-              <h3 class="text-3xl font-extrabold text-white">
-                100%
-              </h3>
-
-              <p class="text-slate-300 text-sm">
-                satisfação garantida
-              </p>
-            </div>
-
-          </div>
-
         </div>
 
       </div>
@@ -231,7 +202,7 @@
 
   </section>
 
-  <!-- BENEFÍCIOS -->
+  <!-- SERVIÇOS -->
   <section class="py-24 bg-white" id="servicos">
 
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
@@ -264,7 +235,7 @@
           </h3>
 
           <p class="mt-4 text-slate-600 leading-relaxed">
-            Removemos manchas, bactérias, fungos e odores com limpeza profissional de alta extração.
+            Removemos manchas, bactérias, fungos e odores com limpeza profissional.
           </p>
 
         </div>
@@ -283,7 +254,7 @@
           </h3>
 
           <p class="mt-4 text-slate-600 leading-relaxed">
-            Proteção contra líquidos, sujeira e acidentes do dia a dia.
+            Proteção contra líquidos e sujeiras do dia a dia.
           </p>
 
         </div>
@@ -302,7 +273,7 @@
           </h3>
 
           <p class="mt-4 text-slate-600 leading-relaxed">
-            Respire ar mais puro com limpeza especializada e higienização completa.
+            Respire ar mais puro com limpeza especializada.
           </p>
 
         </div>
@@ -325,17 +296,18 @@
         </span>
 
         <h2 class="mt-4 text-4xl lg:text-5xl font-extrabold text-blue-950">
-          Veja a diferença
+          Veja a transformação
         </h2>
 
       </div>
 
       <div class="grid md:grid-cols-2 gap-10 mt-16">
 
+        <!-- ANTES -->
         <div class="before-after bg-white rounded-[40px] overflow-hidden shadow-xl">
 
           <img
-            src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1200&auto=format&fit=crop"
+            src="./img/antes.jpg"
             class="w-full h-96 object-cover"
           />
 
@@ -349,10 +321,11 @@
 
         </div>
 
+        <!-- DEPOIS -->
         <div class="before-after bg-white rounded-[40px] overflow-hidden shadow-xl">
 
           <img
-            src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1200&auto=format&fit=crop"
+            src="./img/depois.jpg"
             class="w-full h-96 object-cover"
           />
 
@@ -384,7 +357,7 @@
         </span>
 
         <h2 class="mt-4 text-4xl lg:text-5xl font-extrabold">
-          Atendimento rápido e sem bagunça
+          Atendimento rápido e profissional
         </h2>
 
       </div>
@@ -398,11 +371,11 @@
           </div>
 
           <h3 class="mt-6 text-2xl font-bold">
-            Chame no WhatsApp
+            Solicite o orçamento
           </h3>
 
           <p class="mt-4 text-slate-300">
-            Você envia fotos e recebe atendimento rápido.
+            Fale com nossa equipe no WhatsApp.
           </p>
 
         </div>
@@ -418,7 +391,7 @@
           </h3>
 
           <p class="mt-4 text-slate-300">
-            Fazemos tudo no local sem sujeira e sem complicação.
+            Serviço rápido e sem bagunça.
           </p>
 
         </div>
@@ -434,7 +407,7 @@
           </h3>
 
           <p class="mt-4 text-slate-300">
-            Seu estofado renovado, higienizado e cheiroso.
+            Seu sofá renovado novamente.
           </p>
 
         </div>
@@ -457,7 +430,7 @@
         </span>
 
         <h2 class="mt-4 text-4xl lg:text-5xl font-extrabold text-blue-950">
-          O que nossos clientes dizem
+          Clientes satisfeitos
         </h2>
 
       </div>
@@ -477,7 +450,7 @@
           </div>
 
           <p class="mt-6 text-slate-600 italic leading-relaxed">
-            “Meu sofá voltou a parecer novo. Atendimento extremamente profissional.”
+            “Meu sofá voltou a parecer novo.”
           </p>
 
           <h4 class="mt-6 font-bold text-blue-950">
@@ -499,7 +472,7 @@
           </div>
 
           <p class="mt-6 text-slate-600 italic leading-relaxed">
-            “Tiraram manchas antigas que eu achei que não sairiam nunca.”
+            “Atendimento extremamente profissional.”
           </p>
 
           <h4 class="mt-6 font-bold text-blue-950">
@@ -521,7 +494,7 @@
           </div>
 
           <p class="mt-6 text-slate-600 italic leading-relaxed">
-            “Atendimento rápido e sofá sem cheiro nenhum depois da limpeza.”
+            “Cheiro maravilhoso depois da limpeza.”
           </p>
 
           <h4 class="mt-6 font-bold text-blue-950">
@@ -536,20 +509,20 @@
 
   </section>
 
-  <!-- CTA FINAL -->
+  <!-- CTA -->
   <section class="py-24 bg-gradient-to-r from-blue-950 to-blue-900 text-white">
 
     <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center">
 
       <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight">
 
-        Seu sofá merece uma limpeza profissional.
+        Solicite agora seu orçamento gratuito.
 
       </h2>
 
       <p class="mt-8 text-xl text-slate-300 leading-relaxed">
 
-        Fale agora com nossa equipe e receba um orçamento gratuito no WhatsApp.
+        Atendimento rápido direto no WhatsApp.
 
       </p>
 
@@ -574,14 +547,14 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
 
       <p class="text-sm">
-        © 2026 IT CLEAN Vitória da Conquista — Todos os direitos reservados.
+        © 2026 IT CLEAN — Todos os direitos reservados.
       </p>
 
     </div>
 
   </footer>
 
-  <!-- BOTÃO WHATS -->
+  <!-- BOTÃO FLUTUANTE -->
   <a
     href="https://wa.me/5577992101215?text=Oi%20gostaria%20de%20um%20orçamento"
     class="floating-whatsapp bg-lime-400 hover:bg-lime-300 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition"
